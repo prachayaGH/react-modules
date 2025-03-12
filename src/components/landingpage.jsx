@@ -130,21 +130,23 @@ export function FAQ() {
 
   ]
     return (
-      
-      <Accordion.Root collapsible defaultValue={["b"]}>
-        <h1>FAQ (คำถามที่พบบ่อย)</h1>
-        {items.map((item, index) => (
-          <Accordion.Item key={index} value={item.value}>
-            <Accordion.ItemTrigger>
-              <Span flex="1">{item.title}</Span>
-              <Accordion.ItemIndicator />
-            </Accordion.ItemTrigger>
-            <Accordion.ItemContent>
-              <Accordion.ItemBody>{item.text}</Accordion.ItemBody>
-            </Accordion.ItemContent>
-          </Accordion.Item>
-        ))}
-      </Accordion.Root>
+      <section id="faq">
+        <Accordion.Root collapsible defaultValue={["b"]}>
+          <h1>FAQ (คำถามที่พบบ่อย)</h1>
+          {items.map((item, index) => (
+            <Accordion.Item key={index} value={item.value}>
+              <Accordion.ItemTrigger>
+                <Span flex="1">{item.title}</Span>
+                <Accordion.ItemIndicator />
+              </Accordion.ItemTrigger>
+              <Accordion.ItemContent>
+                <Accordion.ItemBody>{item.text}</Accordion.ItemBody>
+              </Accordion.ItemContent>
+            </Accordion.Item>
+          ))}
+        </Accordion.Root>
+      </section>
+        
     );
 }
 
